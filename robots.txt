@@ -1,0 +1,15 @@
+# robots.txt for QUTA RENT
+# https://qutarent.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://qutarent.com/sitemap.xml
+
+# Crawl-delay untuk mengurangi beban server
+Crawl-delay: 1
+
+# Block akses ke file yang tidak diperlukan
+Disallow: /images/*.tmp
+Disallow: /images/*.bak
