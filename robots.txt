@@ -1,11 +1,11 @@
 # robots.txt for QUTA RENT
-# https://qutarent.com/
+# https://www.qutarent.id
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://qutarent.com/sitemap.xml
+Sitemap: https://www.qutarent.id/sitemap.xml
 
 # Crawl-delay untuk mengurangi beban server
 Crawl-delay: 1
