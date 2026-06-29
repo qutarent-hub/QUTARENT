@@ -2170,6 +2170,26 @@
             box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
         }
 
+        .location-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .btn-maps {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .btn-maps:hover {
+            animation: none;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
+        }
+
         .location-header {
             display: flex;
             align-items: center;
@@ -5146,9 +5166,14 @@
                                 <h3>Bandung</h3>
                             </div>
                             <p>Jl. Kebon Kawung No.49, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171</p>
-                            <a href="https://wa.me/62882016873993" class="btn btn-whatsapp">
-                                <i class="fab fa-whatsapp"></i> Hubungi Kami
-                            </a>
+                            <div class="location-actions">
+                                <a href="https://wa.me/62882016873993" class="btn btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i> Hubungi Kami
+                                </a>
+                                <a href="https://maps.app.goo.gl/4QYqGrKLrDR7Wc878" class="btn btn-maps" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-map-marked-alt"></i> Google Maps
+                                </a>
+                            </div>
                         </div>
                         <div class="location-card reveal">
                             <div class="location-header">
@@ -5308,7 +5333,7 @@
                             <li>Kerusakan kendaraan yang terjadi karena kelalaian supir kami akan menjadi <strong>tanggung jawab kami</strong>.</li>
                             <li>Pelanggan jangan meninggalkan barang miliknya di dalam kendaraan, mohon mengecek kembali barang-barang anda sebelum selesai menggunakan kendaraan.</li>
                             <li>Jika ada barang yang tertinggal, mohon untuk melaporkan ke customer service kami paling lambat <strong>1×24 jam</strong>. Segala kerugian yang timbul karena hal di atas adalah diluar tanggung jawab kami.</li>
-                            <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking: <strong>Rp 8.500.000,- / Hari</strong></li>
+                            <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking <strong>(TIDAK DIWAJIBKAN, HANYA UNTUK YANG MAU MEMILIKI ASURANSI SAJA)</strong>: <strong>Rp 8.500.000,- / Hari</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -5328,7 +5353,7 @@
                                 <li>Kartu Identitas (KTP) dari direksi atau pihak yang berwenang mewakili perusahaan</li>
                                 <li>Surat Ijin Mengemudi (SIM)</li>
                                 <li>Nomor Pokok Wajib Pajak (NPWP)</li>
-                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking: <strong>Rp 3.500.000,- / Hari</strong></li>
+                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking <strong>(TIDAK DIWAJIBKAN, HANYA UNTUK YANG MAU MEMILIKI ASURANSI SAJA)</strong>: <strong>Rp 3.500.000,- / Hari</strong></li>
                             </ul>
                         </div>
 
@@ -5339,7 +5364,7 @@
                                 <li>Kartu Keluarga (KK)</li>
                                 <li>Surat Ijin Mengemudi (SIM A)</li>
                                 <li>Nomor Pokok Wajib Pajak (NPWP)</li>
-                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking: <strong>Rp 3.500.000,- / Hari</strong></li>
+                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking <strong>(TIDAK DIWAJIBKAN, HANYA UNTUK YANG MAU MEMILIKI ASURANSI SAJA)</strong>: <strong>Rp 3.500.000,- / Hari</strong></li>
                             </ul>
                         </div>
 
@@ -5349,7 +5374,7 @@
                                 <li>Pasport</li>
                                 <li>KITAS</li>
                                 <li>Surat Ijin Mengemudi (SIM)</li>
-                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking: <strong>Rp 3.500.000,- / Hari</strong></li>
+                                <li class="highlight">Deposit untuk asuransi pendaftaran reservasi booking <strong>(TIDAK DIWAJIBKAN, HANYA UNTUK YANG MAU MEMILIKI ASURANSI SAJA)</strong>: <strong>Rp 3.500.000,- / Hari</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -5359,8 +5384,12 @@
                 <div class="syarat-content" id="asuransi">
                     <div class="syarat-card reveal">
                         <h3><i class="fas fa-shield-alt"></i> Asuransi Masa Perjalanan</h3>
+                        <div class="syarat-highlight-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>TIDAK DIWAJIBKAN, HANYA JIKA ANDA INGIN MEMPUNYAI ASURANSI SAJA.</strong></p>
+                        </div>
                         <ul class="syarat-list">
-                            <li>Untuk anda sebagai customer / tamu QUTA RENT wajib menyelesaikan asuransi mobil <strong>Rp 8.500.000</strong>, namun ini bukan selaku pembayaran, ini hanya sekadar <strong>jaminan premi</strong> untuk unit.</li>
+                            <li>Untuk anda sebagai customer / tamu QUTA RENT jika ingin memiliki asuransi mobil <strong>"TIDAK DIWAJIBKAN DAN OPTIONAL"</strong> tetapi jika tetap ingin memiliki asuransi maka wajib menyelesaikan asuransi mobil <strong>Rp 8.500.000</strong>, namun ini bukan selaku pembayaran, ini hanya sekadar <strong>jaminan premi</strong> untuk unit.</li>
                             <li>Yang kami butuhkan hanya <strong>bukti transfernya</strong> saja untuk di scan.</li>
                             <li><strong>5-10 menit</strong> kemudian dana anda akan dikembalikan dengan utuh <strong>tanpa potongan</strong>.</li>
                         </ul>
@@ -5382,6 +5411,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -6268,7 +6298,7 @@
                     <p>Penyedia jasa sewa mobil terpercaya di Bandung dan Medan. Melayani berbagai kebutuhan transportasi dengan armada terawat dan harga terjangkau.</p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/qutarent.id/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.instagram.com/qutarent.id/" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.tiktok.com/@qutarent.id" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
@@ -6328,7 +6358,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 QUTA RENT. All Rights Reserved.</p>
+                <p>&copy; 2026 QUTA RENT. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
