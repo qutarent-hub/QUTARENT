@@ -56,14 +56,22 @@
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://www.google.com">
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Preload LCP image (hero first slide) -->
+    <link rel="preload" as="image" href="images/fortuner1.jpg" fetchpriority="high">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- LLMs.txt for AI agent / agentic browsing -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt">
+
+    <!-- Google Fonts (reduced weights) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -4800,7 +4808,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="#profil" class="logo">
-                    <img src="images/qutarent.jpeg" alt="QUTA RENT - Sewa Mobil Bandung Terpercaya" class="logo-img">
+                    <img src="images/qutarent.jpeg" alt="QUTA RENT - Sewa Mobil Bandung Terpercaya" class="logo-img" fetchpriority="high" loading="eager">
                     <div class="logo-text">
                         <span>QUTA RENT</span>
                         <span>Car Rental</span>
@@ -4839,7 +4847,7 @@
         <div class="hero-slider">
             <!-- Slide 1 - Fortuner -->
             <div class="hero-slide active" data-bg="images/fortuner1.jpg">
-                <div class="hero-slide-bg"></div>
+                <div class="hero-slide-bg" style="background-image:url('images/fortuner1.jpg')"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="hero-slide-content">
                     <div class="container">
@@ -5058,7 +5066,7 @@
         <div class="container">
             <div class="about-hero">
                 <div class="about-logo reveal">
-                    <a href="#profil"><img src="images/qutarent.jpeg" alt="QUTA RENT - Rental Mobil Bandung dan Medan"></a>
+                    <a href="#profil"><img src="images/qutarent.jpeg" alt="QUTA RENT - Rental Mobil Bandung dan Medan" loading="lazy"></a>
                 </div>
                 <div class="about-intro reveal">
                     <h1>Tentang QUTA RENT</h1>
@@ -5080,7 +5088,7 @@
                         <p>Setiap kendaraan kami dirawat secara rutin, dibersihkan, dan siap digunakan kapan saja Anda butuhkan. Kepuasan pelanggan adalah prioritas utama kami.</p>
                     </div>
                     <div class="about-story-image">
-                        <img src="images/qutarent.jpeg" alt="QUTA RENT Fleet">
+                        <img src="images/qutarent.jpeg" alt="QUTA RENT Fleet" loading="lazy">
                     </div>
                 </div>
 
@@ -5431,7 +5439,7 @@
                 <!-- Agya AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/agya at.jpg" alt="Sewa Toyota Agya AT Otomatis di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/agya at.jpg" alt="Sewa Toyota Agya AT Otomatis di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">City Car</span>
                     </div>
                     <div class="car-content">
@@ -5457,7 +5465,7 @@
                 <!-- Avanza Facelift AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/avanza facelit AT.jpg" alt="Rental Toyota Avanza Facelift AT di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/avanza facelit AT.jpg" alt="Rental Toyota Avanza Facelift AT di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">MVP</span>
                     </div>
                     <div class="car-content">
@@ -5483,7 +5491,7 @@
                 <!-- Avanza TSS AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/avanza tss at.webp" alt="Sewa Toyota Avanza TSS AT di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/avanza tss at.webp" alt="Sewa Toyota Avanza TSS AT di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">MVP Premium</span>
                     </div>
                     <div class="car-content">
@@ -5509,7 +5517,7 @@
                 <!-- BR-V AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/brv AT.webp" alt="Rental Honda BR-V AT di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/brv AT.webp" alt="Rental Honda BR-V AT di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV</span>
                     </div>
                     <div class="car-content">
@@ -5535,7 +5543,7 @@
                 <!-- Calya AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/calya at.jpg" alt="Sewa Toyota Calya AT di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/calya at.jpg" alt="Sewa Toyota Calya AT di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">City Car</span>
                     </div>
                     <div class="car-content">
@@ -5561,7 +5569,7 @@
                 <!-- City Hatchback -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/city hatchback.webp" alt="Sewa Honda City Hatchback di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/city hatchback.webp" alt="Sewa Honda City Hatchback di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">Hatchback Sport</span>
                     </div>
                     <div class="car-content">
@@ -5587,7 +5595,7 @@
                 <!-- Fortuner GR AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/fortuner1.jpg" alt="Sewa Toyota Fortuner GR di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/fortuner1.jpg" alt="Sewa Toyota Fortuner GR di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV Premium</span>
                     </div>
                     <div class="car-content">
@@ -5613,7 +5621,7 @@
                 <!-- Hiace Commuter -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/hiace commuter.jpg" alt="Rental Toyota Hiace Commuter 14 Penumpang di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/hiace commuter.jpg" alt="Rental Toyota Hiace Commuter 14 Penumpang di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">Van</span>
                     </div>
                     <div class="car-content">
@@ -5639,7 +5647,7 @@
                 <!-- Hiace Luxury -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/hiace-luxury.webp" alt="Sewa Toyota Hiace Luxury Premium di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/hiace-luxury.webp" alt="Sewa Toyota Hiace Luxury Premium di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">Van Premium</span>
                     </div>
                     <div class="car-content">
@@ -5665,7 +5673,7 @@
                 <!-- Hiace Premio -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/hiace-premio.webp" alt="Rental Toyota Hiace Premio untuk Pernikahan di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/hiace-premio.webp" alt="Rental Toyota Hiace Premio untuk Pernikahan di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">Van</span>
                     </div>
                     <div class="car-content">
@@ -5691,7 +5699,7 @@
                 <!-- Honda CR-V -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/honda-crv.png" alt="Sewa Honda CR-V di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/honda-crv.png" alt="Sewa Honda CR-V di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV</span>
                     </div>
                     <div class="car-content">
@@ -5717,7 +5725,7 @@
                 <!-- Honda HR-V -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/honda-hrv.jpg" alt="Rental Honda HR-V di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/honda-hrv.jpg" alt="Rental Honda HR-V di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV</span>
                     </div>
                     <div class="car-content">
@@ -5743,7 +5751,7 @@
                 <!-- HR-V Prestige -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/hrv-prestige.webp" alt="Sewa Honda HR-V Prestige di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/hrv-prestige.webp" alt="Sewa Honda HR-V Prestige di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV Premium</span>
                     </div>
                     <div class="car-content">
@@ -5769,7 +5777,7 @@
                 <!-- Innova Reborn AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/innova-reborn-at.jpg" alt="Rental Toyota Innova Reborn AT di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/innova-reborn-at.jpg" alt="Rental Toyota Innova Reborn AT di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">MVP</span>
                     </div>
                     <div class="car-content">
@@ -5795,7 +5803,7 @@
                 <!-- Jazz -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/jazz.png" alt="Sewa Honda Jazz di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/jazz.png" alt="Sewa Honda Jazz di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">City Car</span>
                     </div>
                     <div class="car-content">
@@ -5821,7 +5829,7 @@
                 <!-- Mobilio -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/mobilio.jpg" alt="Rental Honda Mobilio di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/mobilio.jpg" alt="Rental Honda Mobilio di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">MVP</span>
                     </div>
                     <div class="car-content">
@@ -5847,7 +5855,7 @@
                 <!-- Xpander -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/xpander1.jpg" alt="Sewa Mitsubishi Xpander di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/xpander1.jpg" alt="Sewa Mitsubishi Xpander di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">MVP</span>
                     </div>
                     <div class="car-content">
@@ -5873,7 +5881,7 @@
                 <!-- Zenix Type G AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/zennix-type-g.png" alt="Sewa Toyota Zenix Type G Hybrid di Bandung - QUTA RENT" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-car-side\'></i>'">
+                        <img src="images/zennix-type-g.png" alt="Sewa Toyota Zenix Type G Hybrid di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-car-side\'></i>'">
                         <span class="car-badge">Hybrid MVP</span>
                     </div>
                     <div class="car-content">
@@ -5899,7 +5907,7 @@
                 <!-- Brio -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/newbrio.webp" alt="Rental Honda New Brio di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/newbrio.webp" alt="Rental Honda New Brio di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">City Car</span>
                     </div>
                     <div class="car-content">
@@ -5925,7 +5933,7 @@
                 <!-- Zenix Type Q Modelista AT -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/zenix type q modelista.webp" alt="Sewa Toyota Zenix Type Q Modelista Hybrid di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/zenix type q modelista.webp" alt="Sewa Toyota Zenix Type Q Modelista Hybrid di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">Premium Hybrid</span>
                     </div>
                     <div class="car-content">
@@ -5951,7 +5959,7 @@
                 <!-- Alphard Transformer -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/alphard-transformer.webp" alt="Sewa Toyota Alphard Transformer Hybrid di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/alphard-transformer.webp" alt="Sewa Toyota Alphard Transformer Hybrid di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">VIP Luxury</span>
                     </div>
                     <div class="car-content">
@@ -5977,7 +5985,7 @@
                 <!-- Rush GR Sport -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/rush-gr.png" alt="Rental Toyota Rush GR Sport di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/rush-gr.png" alt="Rental Toyota Rush GR Sport di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV Sport</span>
                     </div>
                     <div class="car-content">
@@ -6003,7 +6011,7 @@
                 <!-- Pajero Sport Dakar -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/pajero-sport.webp" alt="Sewa Mitsubishi Pajero Sport Dakar di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/pajero-sport.webp" alt="Sewa Mitsubishi Pajero Sport Dakar di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV Premium</span>
                     </div>
                     <div class="car-content">
@@ -6029,7 +6037,7 @@
                 <!-- Hyundai Stargazier -->
                 <div class="car-card reveal">
                     <div class="car-image">
-                        <img src="images/Hyundai Stargazier.webp" alt="Rental Hyundai Stargazier Hybrid di Bandung - QUTA RENT" onerror="this.style.display='none'">
+                        <img src="images/Hyundai Stargazier.webp" alt="Rental Hyundai Stargazier Hybrid di Bandung - QUTA RENT" loading="lazy" onerror="this.style.display='none'">
                         <span class="car-badge">SUV Electric</span>
                     </div>
                     <div class="car-content">
@@ -6293,7 +6301,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <a href="#profil" class="logo">
-                        <img src="images/qutarent2.jpeg" alt="QUTA RENT" class="logo-img">
+                        <img src="images/qutarent2.jpeg" alt="QUTA RENT" class="logo-img" loading="lazy">
                     </a>
                     <p>Penyedia jasa sewa mobil terpercaya di Bandung dan Medan. Melayani berbagai kebutuhan transportasi dengan armada terawat dan harga terjangkau.</p>
                     <div class="footer-social">
