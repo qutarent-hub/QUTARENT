@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUTARENT - Rental Mobil | Poster Instagram Story</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Righteous&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .story-container {
+            position: relative;
+            width: 1080px;
+            height: 1920px;
+            max-width: 100vw;
+            max-height: 85vh;
+            aspect-ratio: 9/16;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animated car background */
+        .car-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(180deg, transparent 0%, rgba(255, 193, 7, 0.05) 100%);
+        }
+
+        .car-silhouette {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 280px;
+            opacity: 0.15;
+            animation: carFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes carFloat {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-15px); }
+        }
+
+        /* Road lines */
+        .road {
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            width: 100%;
+            height: 8%;
+            background: #222;
+            border-top: 4px solid #ffc107;
+            border-bottom: 4px solid #ffc107;
+        }
+
+        .road-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(90deg, #ffc107 0, #ffc107 50px, transparent 50px, transparent 100px);
+            animation: roadMove 1s linear infinite;
+        }
+
+        @keyframes roadMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100px); }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 193, 7, 0.4);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) { left: 15%; top: 25%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 80%; top: 35%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 25%; top: 55%; animation-delay: 2s; width: 4px; height: 4px; }
+        .particle:nth-child(4) { left: 75%; top: 20%; animation-delay: 3s; }
+        .particle:nth-child(5) { left: 60%; top: 45%; animation-delay: 4s; width: 5px; height: 5px; }
+        .particle:nth-child(6) { left: 35%; top: 30%; animation-delay: 5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+            50% { transform: translateY(-25px) scale(1.2); opacity: 0.8; }
+        }
+
+        /* Light beams */
+        .light-beam {
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background: linear-gradient(180deg, rgba(255, 193, 7, 0.3), transparent);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+            animation: beamPulse 3s ease-in-out infinite;
+        }
+
+        .beam-1 { top: 10%; right: 10%; transform: rotate(-15deg); }
+        .beam-2 { top: 15%; right: 15%; transform: rotate(10deg); animation-delay: 1s; opacity: 0.5; }
+
+        @keyframes beamPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Main Content */
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 50px 0;
+            text-align: center;
+        }
+
+        /* Top badge */
+        .top-badge {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #1a1a2e;
+            box-shadow: 0 10px 40px rgba(255, 193, 7, 0.4);
+            animation: badgePulse 2s ease-in-out infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(255, 193, 7, 0.4); }
+            50% { box-shadow: 0 15px 50px rgba(255, 193, 7, 0.6); }
+        }
+
+        /* Logo area */
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            font-size: 80px;
+            margin-bottom: 10px;
+            animation: logoBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes logoBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Main title */
+        .main-title {
+            font-family: 'Righteous', cursive;
+            font-size: 100px;
+            line-height: 1;
+            color: #ffc107;
+            text-shadow:
+                0 0 40px rgba(255, 193, 7, 0.6),
+                0 4px 0 #ff9800;
+            letter-spacing: 5px;
+            animation: titleGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 40px rgba(255, 193, 7, 0.6), 0 4px 0 #ff9800; }
+            100% { text-shadow: 0 0 60px rgba(255, 193, 7, 0.9), 0 4px 0 #ff9800; }
+        }
+
+        .brand-line {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+
+        /* Tagline */
+        .tagline {
+            font-size: 26px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            line-height: 1.4;
+        }
+
+        .tagline-highlight {
+            color: #ffc107;
+            font-weight: 700;
+        }
+
+        /* Promo box */
+        .promo-container {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .promo-box {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 152, 0, 0.1));
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 25px;
+            padding: 35px 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .promo-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffc107;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .promo-value {
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+            animation: promoPulse 2s ease-in-out infinite;
+        }
+
+        .promo-unit {
+            font-size: 28px;
+            color: #ffc107;
+            margin-left: 5px;
+        }
+
+        @keyframes promoPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        .promo-note {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 15px;
+        }
+
+        /* Vehicle types */
+        .vehicles-section {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .vehicles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .vehicle-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .vehicle-item:hover {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: rgba(255, 193, 7, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .vehicle-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .vehicle-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .vehicle-price {
+            font-size: 12px;
+            color: #ffc107;
+            margin-top: 5px;
+        }
+
+        /* Features */
+        .features-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 24px;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+
+        /* CTA Button */
+        .cta-section {
+            margin-top: 50px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            padding: 20px 60px;
+            border-radius: 60px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a2e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4);
+            transition: all 0.3s ease;
+            animation: ctaPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4); }
+            50% { box-shadow: 0 20px 50px rgba(255, 193, 7, 0.6); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* Contact section */
+        .contact-section {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            padding: 30px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffc107;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .contact-icon {
+            font-size: 28px;
+        }
+
+        .contact-text {
+            font-size: 18px;
+            color: white;
+            font-weight: 500;
+        }
+
+        /* Bottom hashtags */
+        .hashtags {
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .hashtag {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffc107;
+            margin: 8px 12px;
+            opacity: 0.8;
+        }
+
+        /* Instagram frame corners */
+        .corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; border-radius: 12px 0 0 0; }
+        .corner-tr { top: 20px; right: 20px; border-left: none; border-bottom: none; border-radius: 0 12px 0 0; }
+        .corner-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; border-radius: 0 0 0 12px; }
+        .corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; border-radius: 0 0 12px 0; }
+
+        /* Download button */
+        .download-btn {
+            margin-top: 40px;
+            padding: 18px 50px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title { font-size: 60px; }
+            .promo-value { font-size: 48px; }
+            .vehicles-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+            .vehicle-icon { font-size: 35px; }
+            .features-container { flex-direction: column; align-items: center; }
+            .contact-text { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container" id="poster">
+        <!-- Background Elements -->
+        <div class="car-bg"></div>
+        <div class="car-silhouette">🚗</div>
+
+        <!-- Light beams -->
+        <div class="light-beam beam-1"></div>
+        <div class="light-beam beam-2"></div>
+
+        <!-- Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+        <!-- Road -->
+        <div class="road">
+            <div class="road-line"></div>
+        </div>
+
+        <!-- Corner frames -->
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="top-badge">⭐ Terpercaya Sejak 2020</div>
+
+            <div class="logo-container">
+                <div class="logo-icon">🚘</div>
+            </div>
+
+            <h1 class="main-title">QUTARENT</h1>
+            <p class="brand-line">Rental Mobil</p>
+
+            <p class="tagline">
+                Solusi <span class="tagline-highlight">Terpercaya</span> untuk<br>
+                Kebutuhan Mobilitas Anda
+            </p>
+
+            <!-- Promo Box -->
+            <div class="promo-container">
+                <div class="promo-box">
+                    <div class="promo-label">🔥 Promo Spesial</div>
+                    <div class="promo-value">
+                        200<span class="promo-unit">Rb/Hari</span>
+                    </div>
+                    <div class="promo-note">*All Type Avanza & Xenia</div>
+                </div>
+            </div>
+
+            <!-- Vehicles -->
+            <div class="vehicles-section">
+                <div class="section-title">Kendaraan Tersedia</div>
+                <div class="vehicles-grid">
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚗</div>
+                        <div class="vehicle-name">Avanza</div>
+                        <div class="vehicle-price">200rb/hari</div>
+                    </div>
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚙</div>
+                        <div class="vehicle-name">Xenia</div>
+                        <div class="vehicle-price">200rb/hari</div>
+                    </div>
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚐</div>
+                        <div class="vehicle-name">Elf</div>
+                        <div class="vehicle-price">500rb/hari</div>
+                    </div>
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚕</div>
+                        <div class="vehicle-name">City Car</div>
+                        <div class="vehicle-price">250rb/hari</div>
+                    </div>
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚓</div>
+                        <div class="vehicle-name">Sedan</div>
+                        <div class="vehicle-price">350rb/hari</div>
+                    </div>
+                    <div class="vehicle-item">
+                        <div class="vehicle-icon">🚑</div>
+                        <div class="vehicle-name">Luxury</div>
+                        <div class="vehicle-price">1jt+/hari</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-container">
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span class="feature-text">Mobil Terawat</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <span class="feature-text">Asuransi</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">⛽</span>
+                    <span class="feature-text">BBM Included</span>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <button class="cta-button">📱 Hubungi Kami</button>
+            </div>
+
+            <!-- Contact -->
+            <div class="contact-section">
+                <div class="contact-box">
+                    <div class="contact-title">📞 Kontak Kami</div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <span class="contact-text">WhatsApp: 0812-3456-7890</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">info@qutarent.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">Jakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hashtags -->
+            <div class="hashtags">
+                <span class="hashtag">#QUTARENT</span>
+                <span class="hashtag">#RentalMobil</span>
+                <span class="hashtag">#JasaRental</span>
+                <span class="hashtag">#Liburan</span>
+                <span class="hashtag">#Perjalanan</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="download-btn" onclick="downloadPoster()">
+        📥 Download Poster
+    </button>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        function downloadPoster() {
+            const poster = document.getElementById('poster');
+
+            html2canvas(poster, {
+                scale: 2,
+                backgroundColor: '#0a0a0a',
+                useCORS: true,
+                logging: false
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'QUTARENT-poster.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }).catch(err => {
+                alert('Error: ' + err.message);
+            });
+        }
+    </script>
+</body>
+</html>
